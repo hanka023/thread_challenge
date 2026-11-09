@@ -72,6 +72,7 @@ void solve(int col, int first, int n, t_data *data)
 
 int main(int ac, char **av)
 {
+
 	if (ac != 2)
 	{
 		write(1, "\n", 1);
@@ -79,6 +80,7 @@ int main(int ac, char **av)
 	}
 	long long start = get_time_in_ms();
 	int n = ft_atoi(av[1]);
+	int rows;
 	if (n <= 3)
 	{
 		write(1, "\n", 1);
@@ -87,12 +89,12 @@ int main(int ac, char **av)
 	board_size = n; 
 
 	
-	solve_threads(n);
+	rows = solve_threads(n);
 	printf ("- - - - - - \n");
 	
 	
 	long long end = get_time_in_ms();
 	long long time = end - start;
-	printf (GREEN"time[%lld]\n"RESET, time);
+	printf (GREEN"time[%lld]		rows[%d]\n"RESET,time, rows);
 	return 0;
 }

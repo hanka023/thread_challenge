@@ -6,6 +6,9 @@
 #include <unistd.h>
 #include <sys/time.h>
 
+#define L_BLUE  "\033[38;5;123m"
+#define RESET   "\033[0m"
+
 int *board;         // board[col] = row position of queen in column col
 int board_size;     // size of the board (n)
 
@@ -114,6 +117,6 @@ int main(int ac, char **av)
 	free(board);
 	long long end = get_time_in_ms();
 	long long time = end - start;
-	printf ("rows[%d]	time[%lld]\n",pocet, time);
+	printf (L_BLUE"time[%lld]		rows[%d]	\n" RESET, time, pocet);
 	return 0;
 }

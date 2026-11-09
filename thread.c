@@ -1,5 +1,7 @@
 #include "queen.h"
 
+int count;
+
 void	my_pthreads_join(pthread_t *thread,int len)
 {
 	int	i;
@@ -7,7 +9,6 @@ void	my_pthreads_join(pthread_t *thread,int len)
 	i = 0;
 	while (i < len)
 	{
-
 		pthread_join(thread[i], NULL);
 		++i;
 	}
@@ -60,6 +61,7 @@ pthread_t	*pthread_init(int len, t_data *data, pthread_mutex_t *mtx, pthread_mut
 		if (!data -> board)
 			return (NULL);
 		data[i].rows = 0;
+
 		pthread_create(&threads[i], NULL, &routine, (void*) &data[i]);
 		ft_usleep(1);
 		++i;
@@ -78,17 +80,28 @@ t_data *data_init(int n, pthread_mutex_t *mtx, pthread_mutex_t *board_mtx)
 		return NULL;
 	while (i < n)
 	{
-		data -> i = 0;
-		data -> n = 0;
-		data -> mtx = mtx;
-		data -> board_mtx = board_mtx;
-		data -> board = NULL;
-		data -> rows = 0;
+		data[i].i = 0;
+		data[i].n = 0;
+		data[i].mtx = mtx;
+		data[i].board_mtx = board_mtx;
+		data[i].board = NULL;
+		data[i].rows = 0;
 		++i;
 	}
 	return (data);
 }
 
+int count_rows(t_data *data,int n)
+{
+	int count = 0;
+	int i = 0;
+	while (i < n)
+	{
+		count = count + data[i].rows;
+		++i;
+	}
+	return (count);
+}
 
 
 int solve_threads(int n)
@@ -97,6 +110,7 @@ int solve_threads(int n)
 	pthread_mutex_t *mtx;
 	pthread_mutex_t *board_mtx;
 	t_data *data;
+	int rows = 0;
 
 	mtx = malloc (sizeof(pthread_mutex_t));
 	board_mtx = malloc (sizeof(pthread_mutex_t));
@@ -111,9 +125,9 @@ int solve_threads(int n)
 	pthread_mutex_destroy(board_mtx);
 	free(mtx);
 	free(board_mtx);
-
+	rows = count_rows(data, n);
 	free(data);
-	return (0);
+	return (rows);
 }
 
 
