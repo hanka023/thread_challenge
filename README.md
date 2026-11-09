@@ -58,7 +58,7 @@ Comparision - computing time for 14x14 board with printf:
 
 computing time for 14x14 with no printf:
 
-![img](14x14_no_printf.jpg)
+![img](14x14_no_print.jpg)
 
 ## Ai usage
 
