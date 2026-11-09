@@ -52,6 +52,9 @@ writes only computing time + count results, takes a little more time for computi
 
 ![img](queen_15.jpg)
 
+### Comparision with printf:
+
+![img](14_with_printf.jpg)
 
 ## Ai usage
 
