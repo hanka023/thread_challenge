@@ -50,6 +50,9 @@ example: ./nq 5
 writes only computing time + count results, takes a little more time for computing
 
 
+![img](queen_15.jpg)
+
+
 ## Ai usage
 
 Ai used in final state of my coding - for finding bugs: 
@@ -59,5 +62,3 @@ Ai used in final state of my coding - for finding bugs:
 - Inicialization bug - pointer (data -> i) modified only first element instead of indexing data[i]
 
 
-
-![img](queen_15.jpg)
