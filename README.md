@@ -52,7 +52,7 @@ writes only computing time + count results, takes a little more time for computi
 
 ![img](queen_15.jpg)
 
-Comparision - computing time for 14x14 board with printf:
+Comparision - computing time for 14x14 board with printing every result separately - good time but not sorted results:
 
 ![img](14_with_printf.jpg)
 
@@ -60,9 +60,10 @@ computing time for 14x14 with no printf:
 
 ![img](14x14_no_print.jpg)
 
-Also tried version with structure(it's not here) - not good idea - maybe with better memory allocation?
+Also tried version with structure (it's not here) - not good idea  - sorted results but extra long time - maybe with better memory allocation?
 
 ![img](14x14_t_list.jpg)
+
 
 ## Ai usage
 
@@ -73,3 +74,6 @@ Ai used in final state of my coding - for finding bugs:
 - Inicialization bug - pointer (data -> i) modified only first element instead of indexing data[i]
 
 
+## Conclusion
+
+It's good idea to divide job between multiple threads - but it didn't work extra fast if i had a lot of results to print
