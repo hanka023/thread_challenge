@@ -57,3 +57,7 @@ Ai used in final state of my coding - for finding bugs:
 
 - Race conditions: [board] is a single shared global array overwritten concurently by all threads without per-thread isolation
 - Inicialization bug - pointer (data -> i) modified only first element instead of indexing data[i]
+
+
+
+![img](queen_15.jpg)
