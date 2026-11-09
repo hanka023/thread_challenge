@@ -1,7 +1,7 @@
 
 # THREAD CHALLENGE
 
-*this project is a II.part of my recovery from minishell*
+*this project is a II.(and final) part of my recovery from minishell*
 
 
 ## Challenge
@@ -44,7 +44,7 @@ writes only computing time + count results, takes a little more time for computi
 
 ## Ai usage
 
-Ai used in final state of my coding - for finding bugs:
+Ai used in final state of my coding - for finding bugs: 
 
 
 - Race conditions: [board] is a single shared global array overwritten concurently by all threads without per-thread isolation
