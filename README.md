@@ -31,7 +31,10 @@ example: queen 10
 
 ### Comparision
 
+
 n_queen_reference.c  - n_queen task working with only 1 thread 
+
+[https://github.com/tdanielsousa/42_school_new_exams_2026/tree/main/Rank_3/level2/n_queens]
 
 compile: gcc n_queen_reference.c -o nq 
 

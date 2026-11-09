@@ -1,3 +1,6 @@
+//https://github.com/tdanielsousa/42_school_new_exams_2026/tree/main/Rank_3/level2/n_queens
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -111,6 +114,6 @@ int main(int ac, char **av)
 	free(board);
 	long long end = get_time_in_ms();
 	long long time = end - start;
-	printf ("time[%lld]		poc r [%d]\n", time, pocet);
+	printf ("rows[%d]		time[%lld]\n",pocet, time);
 	return 0;
 }

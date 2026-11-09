@@ -20,8 +20,6 @@
 #define L_BLUE  "\033[38;5;123m"
 
 
-//pthread_mutex_t *print_mutex;
-
 
 typedef struct s_data
 {
@@ -33,7 +31,6 @@ typedef struct s_data
 	int 			rows;
 } t_data;
 
-//pthread_mutex_t	*print_mutex;
 
 /* * * * * * * queen.c * * * * * * */
 
@@ -42,15 +39,11 @@ int 		ft_abs(int n);
 int 		is_safe(int row, int col, t_data *data);
 void		solve(int col, int first, int n, t_data *data);
 
-
-
 /* * * * * * * pthread.c * * * * * * */
 
 void		my_pthreads_join(pthread_t *thread, int len);
 void		print_routine(t_data *data, char *msg);
-
 void		safe_print(t_data *data, char *msg);
-
 void		*routine(void *arg);
 pthread_t   *pthread_init(int len, t_data *data,pthread_mutex_t *mtx, pthread_mutex_t *board_mtx);
 t_data 		*data_init(int n, pthread_mutex_t *mtx, pthread_mutex_t *board_mtx );

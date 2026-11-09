@@ -32,12 +32,11 @@ void	safe_print(t_data *data, char *msg)
 void	*routine(void *arg)
 {
 	t_data *data;
-	//int first = 0;
 	
 	data = (t_data *)arg;
-	printf (BLUE"vlakno[%d]\n"RESET, data ->i);
+	//printf (BLUE"vlakno[%d]\n"RESET, data ->i);
 	solve(0, 0, data -> n, data);
-	printf (BLUE"poc radku [%d]  vlakno[%d]\n"RESET, data ->rows, data -> i);
+	printf (BLUE"rows[%d]  thread[%d]\n"RESET, data ->rows, data -> i);
 	free(data -> board);
 	return (NULL);
 }

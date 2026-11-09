@@ -1,11 +1,8 @@
 #include "queen.h"
 
-// int *board;         
+
 int board_size;   
  
-
-
-
 void print_solution(t_data *data)
 {
     int i;
@@ -27,21 +24,6 @@ int ft_abs(int n)
 		return (-n);
 	return n;
 }
-
-// int is_safe(int row, int col)
-// {
-// 	int i = 0;
-
-// 	while (i < col)
-// 	{
-// 		if (board[i] == row)
-// 			return 0;
-// 		if (ft_abs(board[i] - row) == ft_abs(i - col))
-// 			return 0;
-// 		++i;
-// 	}
-// 	return 1;
-// }
 
 int is_safe(int row, int col, t_data *data)
 {
@@ -70,7 +52,7 @@ void solve(int col, int first, int n, t_data *data)
 	if (col == 0)
 	{
 		(row = data -> i);
-		printf (GREEN"row [%d]\n"RESET,data -> i);
+		//printf (GREEN"row [%d]\n"RESET,data -> i);
 	}
 	else
 		row = 0;
@@ -107,7 +89,7 @@ int main(int ac, char **av)
 	
 	solve_threads(n);
 	printf ("- - - - - - \n");
-	//solve(0);
+	
 	
 	long long end = get_time_in_ms();
 	long long time = end - start;
