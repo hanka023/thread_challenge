@@ -60,6 +60,10 @@ computing time for 14x14 with no printf:
 
 ![img](14x14_no_print.jpg)
 
+Also tried version with structure(it's not here) - not good idea - maybe with better memory allocation?
+
+![img](14x14_t_list.jpg)
+
 ## Ai usage
 
 Ai used in final state of my coding - for finding bugs: 
