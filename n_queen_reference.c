@@ -114,6 +114,6 @@ int main(int ac, char **av)
 	free(board);
 	long long end = get_time_in_ms();
 	long long time = end - start;
-	printf ("rows[%d]		time[%lld]\n",pocet, time);
+	printf ("rows[%d]	time[%lld]\n",pocet, time);
 	return 0;
 }
