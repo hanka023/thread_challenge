@@ -37,7 +37,7 @@ void	*routine(void *arg)
 	data = (t_data *)arg;
 	//printf (BLUE"vlakno[%d]\n"RESET, data ->i);
 	solve(0, 0, data -> n, data);
-	printf (BLUE"rows[%d]  thread[%d]\n"RESET, data ->rows, data -> i);
+	//printf (BLUE"rows[%d]  thread[%d]\n"RESET, data ->rows, data -> i);
 	free(data -> board);
 	return (NULL);
 }
@@ -61,6 +61,7 @@ pthread_t	*pthread_init(int len, t_data *data, pthread_mutex_t *mtx, pthread_mut
 		if (!data -> board)
 			return (NULL);
 		data[i].rows = 0;
+		data[i].lst = NULL;
 
 		pthread_create(&threads[i], NULL, &routine, (void*) &data[i]);
 		ft_usleep(1);
@@ -86,6 +87,7 @@ t_data *data_init(int n, pthread_mutex_t *mtx, pthread_mutex_t *board_mtx)
 		data[i].board_mtx = board_mtx;
 		data[i].board = NULL;
 		data[i].rows = 0;
+		data[i].lst = NULL;
 		++i;
 	}
 	return (data);
@@ -103,6 +105,21 @@ int count_rows(t_data *data,int n)
 	return (count);
 }
 
+void print_data(t_data *data)
+{
+	int i = 0;
+	int n = data -> n;
+	
+	while (i < n)
+	{
+		pthread_mutex_lock(data -> mtx);
+		printf (BLUE"thread[%d]   rows[%d] \n"RESET,data[i].i, data[i].rows );
+		print_list (data[i].lst, n);
+		pthread_mutex_unlock(data -> mtx);
+		free_list (data[i].lst);
+		++i;
+	}
+}
 
 int solve_threads(int n)
 {
@@ -125,7 +142,9 @@ int solve_threads(int n)
 	pthread_mutex_destroy(board_mtx);
 	free(mtx);
 	free(board_mtx);
+	print_data(data);
 	rows = count_rows(data, n);
+		
 	free(data);
 	return (rows);
 }

@@ -71,7 +71,7 @@ void solve(int col)
 	// base case check: if we've placed queens in all columns
 	if (col == board_size)
 	{
-		//print_solution();
+		print_solution();
 		++pocet;
 		return ;
 	}

@@ -60,7 +60,7 @@ computing time for 14x14 with no printf:
 
 ![img](14x14_no_print.jpg)
 
-Also tried version with structure (it's not here) - not good idea  - sorted results but extra long time - maybe with better memory allocation?
+Also tried version with structure (it's not here) - not good idea  - sorted results but extra long time - maybe with better memory allocation? (14 x 14 board)
 
 ![img](14x14_t_list.jpg)
 

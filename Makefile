@@ -8,7 +8,8 @@ DEBUG_FLAGS = -fsanitize=address
 
 
 # Seznam všech .c souborů
-SRC =  	queen.c 		\
+SRC =  	linked_list.c	\
+		queen.c 		\
 		thread.c 		\
 		time.c			\
 		utils.c			\
