@@ -11,8 +11,13 @@ you have to take one task - whitch take a lot of time to computing - and divide 
 [i choose n_queen problem]
 
 
-you have to write your code with no AI usage as possible !
+!!! you have to write your code with no AI usage as possible !!!
 
+
+
+## Purpose
+
+This task should demonstrate if is useful to divide task between multiple threads
 
 
 ## Usage
@@ -52,27 +57,3 @@ Ai used in final state of my coding - for finding bugs:
 
 - Race conditions: [board] is a single shared global array overwritten concurently by all threads without per-thread isolation
 - Inicialization bug - pointer (data -> i) modified only first element instead of indexing data[i]
-
-
-
-
-
-
-
-
-
-
-# THREAD CHALLENGE
-
-this project is a part of my recovery from minishell
-
-compilation: make 
-
-
-start: ./queen [number]
-
-
-example: queen 10
-
-
-reference: n_queen_reference.c [n_queen with only one thread]
