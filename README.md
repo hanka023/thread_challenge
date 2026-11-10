@@ -67,6 +67,16 @@ Also tried version with structure (it's not here) - not good idea  - sorted resu
 
 If you want version with printf, uncomment queen.c [line47]  and n_queen_reference.c [line74]
 
+## Sources
+
+
+https://broman.dev/download/The%20Linux%20Programming%20Interface.pdf
+
+https://www.codequoi.com/en/tags/thread/
+
+https://code-vault.net/course/6q6s9eerd0:1609007479575
+
+
 
 ## Ai usage
 
