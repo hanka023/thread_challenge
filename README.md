@@ -51,17 +51,17 @@ writes only computing time + count results, takes a little more time for computi
 
 computing time for 14x14 with no printf:
 
-![img](14x14_no_printf.jpg)
+![img](img/14x14_no_printf.jpg)
 
 
 Comparision - computing time for 14x14 board with printing every result separately - good time but not sorted results:
 
-![img](14_with_printf.jpg)
+![img](img/14_with_printf.jpg)
 
 
 Also tried version with structure (it's not here) - not good idea  - sorted results but extra long time - maybe with better memory allocation? (14 x 14 board)
 
-![img](14x14_t_list.jpg)
+![img](img/14x14_t_list.jpg)
 
 ## Print version
 

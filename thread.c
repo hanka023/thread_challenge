@@ -112,9 +112,9 @@ void print_data(t_data *data)
 	
 	while (i < n)
 	{
-		pthread_mutex_lock(data -> mtx);
+		pthread_mutex_lock(data[i].mtx);
 		printf (BLUE"thread[%d]   rows[%d] \n"RESET,data[i].i, data[i].rows );
-		pthread_mutex_unlock(data -> mtx);
+		pthread_mutex_unlock(data[i].mtx);
 		++i;
 	}
 }
@@ -135,12 +135,13 @@ int solve_threads(int n)
 	data = data_init(n, mtx, board_mtx);
 	threads = pthread_init(n, data, mtx, board_mtx);
 	my_pthreads_join(threads, n);
+	print_data(data);
 	free(threads);
 	pthread_mutex_destroy(mtx);
 	pthread_mutex_destroy(board_mtx);
 	free(mtx);
 	free(board_mtx);
-	print_data(data);
+	
 	rows = count_rows(data, n);
 		
 	free(data);
