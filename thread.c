@@ -114,9 +114,7 @@ void print_data(t_data *data)
 	{
 		pthread_mutex_lock(data -> mtx);
 		printf (BLUE"thread[%d]   rows[%d] \n"RESET,data[i].i, data[i].rows );
-		print_list (data[i].lst, n);
 		pthread_mutex_unlock(data -> mtx);
-		free_list (data[i].lst);
 		++i;
 	}
 }

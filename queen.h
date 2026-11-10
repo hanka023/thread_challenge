@@ -38,15 +38,6 @@ typedef struct s_data
 } t_data;
 
 
-
-/* * * * * * * linked_list.c * * * * * * */
-
-void	solution_to_lst(t_data *data);
-t_list	*new_list(t_data *data);
-void	add_back(t_list **head, t_list *lst);
-void	print_list(t_list *lst, int len);
-void	free_list(t_list *lst);
-
 /* * * * * * * queen.c * * * * * * */
 
 void 		print_solution(t_data *data);

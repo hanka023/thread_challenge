@@ -45,7 +45,6 @@ void solve(int col, int first, int n, t_data *data)
 	if (col == board_size)
 	{
 		//print_solution(data);
-		solution_to_lst(data);
 		
 		++(data -> rows);
 		return ;
@@ -53,7 +52,6 @@ void solve(int col, int first, int n, t_data *data)
 	if (col == 0)
 	{
 		(row = data -> i);
-		//printf (GREEN"row [%d]\n"RESET,data -> i);
 	}
 	else
 		row = 0;
