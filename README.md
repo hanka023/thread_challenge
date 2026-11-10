@@ -64,6 +64,10 @@ Also tried version with structure (it's not here) - not good idea  - sorted resu
 
 ![img](14x14_t_list.jpg)
 
+## Print version
+
+If you want version with printf, uncomment queen.c [line47]  and n_queen_reference.c [line74]
+
 
 ## Ai usage
 
