@@ -3,7 +3,7 @@
 
 *this project is a II.(and final) part of my recovery from minishell*
 
-### Do you remember dining philosophers?      Now it's time to work ! 
+### Do you remember [Text odkazu](https://medium.com/@jalal92/the-dining-philosophers-7157cc05315)?      Now it's time to work ! 
 
 ![img](img/working_philos.png)
 
