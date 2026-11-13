@@ -4,8 +4,10 @@
 *this project is a II.(and final) part of my recovery from minishell*
 
 ### Do you remember [Dining philosophers](https://medium.com/@jalal92/the-dining-philosophers-7157cc05315) ?  
-<img src="img/philos.png" width="300" alt=":(">  		
- 
+
+<p align="center">
+ <img src="img/philos.png" width="300" alt=":(">  		
+ </p>
  
 ### Now it's time to work ! 
 
