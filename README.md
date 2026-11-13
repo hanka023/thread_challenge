@@ -5,9 +5,9 @@
 
 ### Do you remember [Dining philosophers](https://medium.com/@jalal92/the-dining-philosophers-7157cc05315) ?  
 
- <img src="img/philos.png" width="300" alt=":(">  		
+ <img src="img/philos.png" width="300" align = "center" alt=":(">  		
  
- Now it's time to work ! 
+### Now it's time to work ! 
 
 ![img](img/working_philos.png)
 
