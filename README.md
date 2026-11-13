@@ -5,7 +5,7 @@
 
 ### Do you remember dining philosophers?      Now it's time to work ! 
 
-![img](img/working_philosophers.png)
+![img](img/working_philos.png)
 
 ## Challenge
 
