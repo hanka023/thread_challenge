@@ -3,9 +3,9 @@
 
 *this project is a II.(and final) part of my recovery from minishell*
 
-### Do you remember dining philosophers?      Now is time to work ! 
+### Do you remember dining philosophers?      Now it's time to work ! 
 
-![img](img/philos.png)			![img](img/working_philos.png)
+![img](img/working_philos.png)
 
 ## Challenge
 
